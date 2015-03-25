@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Contact Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link data-require="jquery.mobile@*" data-semver="1.4.0" rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+    <link data-require="foundation@*" data-semver="5.5.0" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css" />
+    
+    <script data-require="jquery@2.1.1" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <script data-require="foundation@*" data-semver="5.5.0" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/vendor/placeholder.js"></script>
+    <script data-require="foundation@*" data-semver="5.5.0" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/vendor/fastclick.js"></script>
+    <script data-require="foundation@*" data-semver="5.5.0" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/vendor/jquery.cookie.js"></script>
+    <script data-require="foundation@*" data-semver="5.5.0" src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/js/foundation.min.js"></script>
+    
+    <script data-require="jquery.mobile@*" data-semver="1.4.0" src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    
+    <script data-require="modernizr@*" data-semver="2.6.2" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.js"></script>
+    
+    <script src="contactTemplating.js"></script>
+    <script src="contactApi.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div data-role="page" id="home-page">
+      <div data-role="header">
+        <h1>Contacts</h1>
+      </div>
+      <div data-role="content">
+        <ul data-role="listview" id="contact-list">
+          <!--
+          <li>
+            <a>
+              <h3>Item 1</h3>
+              <p>Details                                 <span>Title</span>
+              </p>
+            </a>
+          </li>
+          <li>
+            <a>
+              <h3>Item 2</h3>
+              <p>Details</p>
+            </a>
+          </li>
+          <li>
+            <a href="#details-page" data-contact-id="12">
+              <div class="row">
+                <div class="12 columns">
+                  <h1>Malcolm Reynolds</h1>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-6 columns">
+                  <i>Captain</i>
+                </div>
+                <div class="small-6 columns">
+                  <span style="float: right;">(612) 555-1234</span>
+                </div>
+              </div>
+            </a>
+          </li>
+-->
+        </ul>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div style="text-align: right; margin-right: 16px;">
+          <a href="#edit-page" data-role="button" data-icon="plus" data-iconpos="notext" data-transition="slide">Add New Contact</a>
+        </div>
+      </div>
+    </div>
+    <div data-role="page" id="details-page">
+      <div data-role="header">
+        <a id="details-back-button" data-role="button" data-rel="back" data-icon="carat-l">Back</a>
+        <h1>Contact Details</h1>
+      </div>
+      <div id="details-page-content" data-role="content">
+<!--        <div>Name</div>
+        <div><h1>Malcolm Reynolds</h1></div>
+        <div>Title</div>
+        <div><h1>Captain</h1></div>
+        <div>Phone</div>
+        <div><h1>(612) 555-1234</h1></div>
+        <div>Email</div>
+        <div><h1>m_reynolds@gmail.com</h1></div>
+        <div>Twitter</div>
+        <div><h1>@malcolmreynolds</h1></div>
+-->
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <a href="delete.co" data-role="button" data-icon="delete" data-iconpos="right">Delete Contact</a>
+        <!--      <div style="text-align: right; margin-right: 16px;">
+        <a href="delete.co" data-role="button" data-icon="edit" data-iconpos="notext">Edit Contact</a>
+      </div>-->
+      </div>
+    </div>
+    <div data-role="page" id="edit-page">
+      <div data-role="header">
+        <a data-role="button" data-rel="back" data-icon="carat-l">Back</a>
+        <h1>Edit Contact</h1>
+      </div>
+      <div id="edit-page-content" data-role="content">
+        <form>
+          <label for="edit-name">Name:</label>
+          <input id="edit-name" name="edit-name" type="text" data-clear-btn="true" value="" />
+          <label for="edit-title">Title:</label>
+          <input id="edit-title" name="edit-title" type="text" data-clear-btn="true" value="" />
+          <label for="edit-phone">Phone:</label>
+          <input id="edit-phone" name="edit-phone" type="text" data-clear-btn="true" value="" />
+          <label for="edit-email">Email:</label>
+          <input id="edit-email" name="edit-email" type="text" data-clear-btn="true" value="" />
+          <label for="edit-twitter">Twitter:</label>
+          <input id="edit-twitter" name="edit-twitter" type="text" data-clear-btn="true" value="" />
+        </form>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <div style="text-align: right; margin-right: 16px;">
+          <a id="edit-save-button" data-role="button" data-icon="check" data-iconpos="notext">Delete Contact</a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
